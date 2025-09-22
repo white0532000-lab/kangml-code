@@ -1,0 +1,26 @@
+#康师傅流控系统
+#官方：www.kangml.com
+client
+dev tun
+proto udp
+remote [domain] 53
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+machine-readable-output
+connect-retry-max 5
+connect-retry 5
+resolv-retry 60
+auth-user-pass
+ns-cert-type server
+comp-lzo
+verb 3
+## 证书
+<ca>
+[证书]
+</ca>
+key-direction 1
+<tls-auth>
+[证书]
+</tls-auth>
